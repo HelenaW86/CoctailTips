@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  min-height: 100vh;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+section{
+max-width: 90%;
+margin: auto;
+@media (min-width: 870px) {
+  width: 800px;
+}
+}
+img{
+ border-radius: 5px;
+ width: 100%;
+ @media (min-width: 870px) {
+  width: 50%;
+ }
+}
+h1{
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  @media (min-width: 870px) {
+    font-size: 30px;
+    margin: 50px 0;
+   }
+}
+h2{
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+h3{
+  font-weight: 500;
+  margin: 20px 20px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+  margin: 0 20px 20px;
+  font-size: 20px;
+}
+ul{
+  font-size: 20px;
+  margin: 0;
+}
+#ingredients{
+  display: inline-block;
+  background: #f7eaf3;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  @media (min-width: 870px) {
+    margin: 0 auto 0 10px;
+    width: 50%;
+  }
+}
+#content-1{
+width: 100%;
+display: flex;
+justify-content: baseline;
+flex-direction: column;
+@media (min-width: 870px) {
+  margin: auto;
+  flex-direction: row;
+  width: 800px;
+}
+}
+#ingredient-options{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+#option-container{
+  border: 3px solid #f7eaf3;
+  margin-top: 20px;
+  border-radius: 5px; 
+  @media (min-width: 870px) {
+    width: 800px;
+  }
+}
+#option-form{
+  margin: 0 20px 20px;
+}
+#option{
+  width: 302px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  margin: 3px;
+}
+#option p{
+  margin: 5px 0;
+}
+#option-images{
+  width: 300px;
+}
+.ingredient-button{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  width: 175px;
+  height: 40px;
+  cursor: pointer;
+  background: #f7eaf3;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+
+}
+#fr-d{
+  margin-left: 6%;
+}
+#find{
+  margin: 22px;
+}

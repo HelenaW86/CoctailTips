@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fredags Drinken</title>
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/cocktail.png" type="image/png"/>
+  </head>
+  <body>
+    <section>
+      <% if(locals.drink){%>
+    <h1>Fredags Drinken 🍸<b><%=drink%></b></h1>
+    <div id="content-1">
+   <img src=<%=image%> alt=<%=drink%> height="auto"/>
+   <div id="ingredients">
+    <h3>Ingredients</h3>
+    <ul>
+    <%ingredients.forEach(e => {%>
+      <li><%=e%></li>
+     <%});%>
+    </ul>
+    <h3>Make it</h3>
+    <p><%=intro%></p>
+   </div>
+  </div>
+  <div id="option-container">
+    <h3 id="find">Find drinks by ingredients</h3>
+  <form id="option-form" method="POST">
+    <input class="ingredient-button" name="value" type="submit" value="Vodka" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Gin" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Tequila" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Cognac" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Rum" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Dark rum" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Light rum" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Malibu rum" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Whiskey" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Rye whiskey" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Beer" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Lager" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Red wine" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Baileys irish cream" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Kahlua" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Absolut Kurant" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Amaretto" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Cointreau" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Grenadine" formaction="/ingredients"/>
+    <input class="ingredient-button" name="value" type="submit" value="Coffee" formaction="/ingredients"/> 
+  </form>
+</div>
+<%}%>
+  </section>
+  <%if(locals.array){%>
+    <h1 id="fr-d">Fredags Drinken 🍸</h1>
+    <form id="ingredient-options" method="POST">
+    <%array.forEach(element => {%>
+      <button id="option" type="submit" name="selected" value=<%=element.idDrink%> formaction="/select">
+      <p><%=element.strDrink%></p>
+      <img id="option-images" src=<%=element.strDrinkThumb%> alt=<%=element.strDrink%> width="300" height="auto"/>
+      </button>
+    <%})%>
+    <%}%>
+  </form>
+  </body>
